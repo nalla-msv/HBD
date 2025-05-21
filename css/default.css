@@ -19,3 +19,34 @@
 #copyright a{color:#666}
 #icon{font-size: 48px;color: red;margin: 50 px; align-content: center;}
 #heartspan{align-content: center;text-align: center;margin: 20px;}
+@media (max-width: 700px) {
+  #loveHeart {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+  }
+  #code {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+  }
+  #mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body {
+    font-size: 14px;
+  }
+  #words {
+    font-size: 18px;
+    width: 90% !important;
+  }
+}
+#player {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
