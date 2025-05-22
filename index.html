@@ -15,14 +15,22 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- Commented Out YouTube Script -->
+<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
 
 </head>
 
 <body>
 
-<!-- Hidden YouTube Player -->
-<div id="player"></div>
+<!-- Commented Out YouTube Player -->
+<!-- <div id="player"></div> -->
+
+<!-- Local Audio -->
+<audio id="bg-audio" preload="auto" loop>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
 <div id="mainDiv">
 	<div id="content">
@@ -117,16 +125,26 @@ if (!document.createElement('canvas').getContext) {
 }
 </script>
 
+<!-- Audio Play on Click -->
+<script>
+document.addEventListener("click", function() {
+    var audio = document.getElementById("bg-audio");
+    audio.play();
+}, { once: true });
+</script>
+
+<!-- Commented Out YouTube JS Code -->
+<!--
 <script>
 var player;
-var startTime = 228; // ⏱️ start time in seconds
-var endTime = 293;   // ⏱️ end time in seconds
+var startTime = 228;
+var endTime = 293;
 
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('player', {
 		height: '0',
 		width: '0',
-		videoId: 'Grr0FlC8SQA', // 🎵 Replace with your actual YouTube video ID
+		videoId: 'Grr0FlC8SQA',
 		playerVars: {
 			'autoplay': 0,
 			'controls': 0,
@@ -154,6 +172,7 @@ function onPlayerStateChange(event) {
 	}
 }
 </script>
+-->
 
 </body>
 </html>
